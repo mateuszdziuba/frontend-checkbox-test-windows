@@ -13,6 +13,7 @@
     @include flexbox();
     @include align-items(center);
     @include justify-content(center);
+    
   }
 }
 .hidden {
@@ -22,4 +23,38 @@
   @include justify-content(center);
   background-color: red;
   color: white
+}
+
+input{
+  display:none;  
+}
+
+label{
+  width:44px;
+  height:25px;
+  box-sizing:border-box;
+  border:1px solid;
+  float:left;
+  border-radius:40px;
+  position:relative;
+  cursor:pointer;
+  transition:.3s ease;
+  color:#007bff;
+  &:before {
+    transition:.3s ease;
+    content:'';
+    width: 19px;
+    height:19px;
+    position:absolute;
+    background:#007bff;
+    left:3px;
+    top:2px;
+    box-sizing:border-box;
+    border-radius:40px;
+  }
+}
+
+
+input[type=checkbox]:checked + label:before{
+  left:20px;
 }

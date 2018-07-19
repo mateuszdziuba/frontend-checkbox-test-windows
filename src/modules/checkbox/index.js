@@ -23,16 +23,18 @@ class Checkbox extends React.Component {
                 </div>
                 <div className="content">
                     <input 
+                        id="switch"
                         type="checkbox"
-                        checked = {this.state.isChecked}
+                        checked = {isChecked}
                         onChange={this.handleInputChange}
                     />
+                    <label for="switch"></label>
                 </div>
                 {!isChecked ? '' :
                 <div className="hidden">
                     hidden content
                 </div>
-            }
+                }
             </div>
         );
     }
